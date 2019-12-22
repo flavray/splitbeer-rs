@@ -1,16 +1,9 @@
-
-//! Example actix-web application.
-//!
-//! This code is adapted from the front page of the [Actix][] website.
-//!
-//! [actix]: https://actix.rs/docs/
-
 use actix_web::{server, App, HttpRequest, Responder};
 use std::env;
 
 fn greet(req: &HttpRequest) -> impl Responder {
     let to = req.match_info().get("name").unwrap_or("World");
-    format!("Hello {}!", to)
+    format!("Hi {}!", to)
 }
 
 fn main() {
